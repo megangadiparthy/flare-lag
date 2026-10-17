@@ -1,0 +1,96 @@
+{
+  "people": 400,
+  "days": 120,
+  "flare_days": 0.454,
+  "planted_lags": {
+    "stress": 2,
+    "short_sleep": 1,
+    "sugar": 3
+  },
+  "discovery": {
+    "causes": {
+      "stress": {
+        "planted_lag": 2,
+        "best_lag": 2,
+        "correlation": 0.419,
+        "recovered": true
+      },
+      "short_sleep": {
+        "planted_lag": 1,
+        "best_lag": 1,
+        "correlation": 0.06,
+        "recovered": true
+      },
+      "sugar": {
+        "planted_lag": 3,
+        "best_lag": 3,
+        "correlation": 0.212,
+        "recovered": true
+      }
+    },
+    "decoys": {
+      "steps": {
+        "best_lag": 3,
+        "correlation": -0.005
+      },
+      "screens": {
+        "best_lag": 4,
+        "correlation": 0.012
+      },
+      "cream": {
+        "best_lag": 0,
+        "correlation": 0.698
+      }
+    },
+    "same_day_blame": "cream",
+    "same_day_blames_cream": true
+  },
+  "prediction": {
+    "same_day": {
+      "auc": 0.582,
+      "average_precision": 0.519,
+      "flare_rate_test": 0.447
+    },
+    "lagged_1_to_3": {
+      "auc": 0.773,
+      "average_precision": 0.737,
+      "flare_rate_test": 0.453
+    }
+  },
+  "top_coefficients": [
+    {
+      "feature": "stress_lag2",
+      "coefficient": 0.908
+    },
+    {
+      "feature": "sugar_lag3",
+      "coefficient": 0.522
+    },
+    {
+      "feature": "stress_lag3",
+      "coefficient": 0.231
+    },
+    {
+      "feature": "short_sleep_lag1",
+      "coefficient": 0.15
+    },
+    {
+      "feature": "stress_lag1",
+      "coefficient": 0.067
+    },
+    {
+      "feature": "short_sleep_lag2",
+      "coefficient": 0.029
+    },
+    {
+      "feature": "screens_lag3",
+      "coefficient": 0.027
+    },
+    {
+      "feature": "sugar_lag2",
+      "coefficient": 0.022
+    }
+  ],
+  "top5_planted_cause_count": 5,
+  "note": "Diaries are simulated. Cream is applied because a flare is already happening. This does not diagnose anyone and does not use real health records."
+}
