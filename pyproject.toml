@@ -1,7 +1,7 @@
 [project]
 name = "flare-lag"
 version = "0.1.0"
-description = "Lagged models for delayed health triggers."
+description = "Lagged models for delayed skin flares in conditions such as psoriasis, eczema, and acne."
 requires-python = ">=3.11"
 dependencies = [
   "numpy>=1.26",

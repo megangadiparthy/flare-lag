@@ -1,8 +1,9 @@
-"""Synthetic daily diaries with a known delay between a habit and a flare.
+"""Synthetic daily diaries with a known delay between a habit and a skin flare.
 
-The diaries are not patient records. Each person has three planted triggers
-and three decoys. Cream is applied because a flare is already happening, so
-it lines up with the same day and is not a cause.
+A flare here is a skin flare, as in psoriasis, eczema, or acne. The diaries
+are not patient records. Each person has three planted triggers and three
+decoys. Cream is applied because a skin flare is already happening, so it
+lines up with the same day and is not a cause.
 """
 
 from __future__ import annotations

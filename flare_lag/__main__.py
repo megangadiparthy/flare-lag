@@ -34,7 +34,7 @@ def _figure(found: dict, models: dict, path: Path) -> None:
     axes[0].bar(x - 0.16, planted, width=0.32, color="#C4607A", label="Planted delay")
     axes[0].bar(x + 0.16, chosen, width=0.32, color="#221D27", label="Strongest lag")
     axes[0].set_xticks(x, labels)
-    axes[0].set_ylabel("Days before the flare")
+    axes[0].set_ylabel("Days before the skin flare")
     axes[0].set_ylim(0, 4.5)
     axes[0].set_title("Did the scan find the planted delay?")
     axes[0].legend(frameon=False, fontsize=8)
@@ -45,7 +45,7 @@ def _figure(found: dict, models: dict, path: Path) -> None:
     axes[1].axhline(0.5, color="#CBC6B9", lw=1)
     axes[1].set_ylim(0.4, 1.0)
     axes[1].set_ylabel("Test AUC")
-    axes[1].set_title("Predicting a flare on held-out people")
+    axes[1].set_title("Predicting a skin flare on held-out people")
     for i, value in enumerate(aucs):
         axes[1].text(i, value + 0.02, f"{value:.2f}", ha="center", fontsize=9)
 
@@ -75,7 +75,8 @@ def main() -> None:
         "top_coefficients": ranks,
         "top5_planted_cause_count": top5_causes,
         "note": (
-            "Diaries are simulated. Cream is applied because a flare is already happening. "
+            "Diaries are simulated. A flare here is a skin flare, as in psoriasis, eczema, or acne. "
+            "Cream is applied because a skin flare is already happening. "
             "This does not diagnose anyone and does not use real health records."
         ),
     }
